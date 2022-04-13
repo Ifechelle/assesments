@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Architects+Daughter&family=Festive&family=Gideon+Roman&family=Lobster+Two:ital@1&family=Shizuru&family=Syne+Tactile&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
+    sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  font-family: 'Akaya Telivigala', cursive;
+  font-family: 'Architects Daughter', cursive;
+  font-family: 'Festive', cursive;
+  font-family: 'Gideon Roman', cursive;
+  font-family: 'Lobster Two', cursive;
+  font-family: 'Shizuru', cursive;
+  font-family: 'Syne Tactile', cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

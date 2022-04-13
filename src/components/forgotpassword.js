@@ -31,7 +31,6 @@ function ForgotPass() {
     const onFailure = (message) => {
         setServerError(message)
     }
-    console.log(formik.values)
     return (
         <div className="text-center bg-rose-400 h-screen">
             <header>

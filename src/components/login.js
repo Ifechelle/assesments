@@ -27,13 +27,11 @@ function Login() {
     validationSchema: loginValidationSchema,
   });
   const onSuccess = () => {
-    console.log("got here")
     navigate ("/Assesments")
   }
   const onFailure = (message) => {
     setServerError(message)
   }
-  console.log(formik.values)
 
   const navigate = useNavigate()
   const ForgotPassHandler = () => {

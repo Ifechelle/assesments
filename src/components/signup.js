@@ -43,7 +43,6 @@ function SignUp() {
     const onFailure = (message) => {
         setServerError(message)
     }
-    console.log(formik.values)
     
     return (
         <div className='p-5 bg-rose-400 grid text-center text-blue-400 text-base shadow-inner-lg h-screen'>

@@ -7,8 +7,6 @@ import AssesmentQuestions from "./secure/assesment-questions";
 
 function Assesments() {
   const { user, questions, answers } = useState(store)
-  console.log(questions.get())
-  console.log (user.get())
 
   useEffect(() => {
       getListOfQuestions()

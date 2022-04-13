@@ -1,6 +1,7 @@
 import { useFormik } from "formik"
 import { FaSpinner } from 'react-icons/fa'
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 import { useState as useGlobalState } from "@hookstate/core"
 import store from "../../store"
 import { submitAnswers } from "../../services/questions"
@@ -13,35 +14,34 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     const [processing, setProcessing] = useState(false)
     const q = listOfQuestions[currentQuestionsIndex]
     const questionId = q?.id
+    const selectedAnswers = answersDictionary[questionId]
+
     useEffect(() => {
-        setAnswers(answersDictionary[q?.id])
-        console.log(answersDictionary, "***")
-    },[questionId])
+        setAnswers(selectedAnswers)
+    }, [selectedAnswers])
     const formik = useFormik({
         initialValues: {
 
         },
         onSubmit: async (values) => {
             setProcessing(false)
-            console.log(answers, "---")
             submitAnswers(answers, onSubmitSuccess)
         },
     })
     const questionsIndex = currentQuestionsIndex
-    console.log(questionsIndex)
     const next = () => {
-        console.log(answers)
-        submitAnswers(answers, onSubmitSuccess)
+        submitAnswers(answers, onNextSuccess)
     }
     const previous = () => {
         setCurrentQuestionsIndex(currentQuestionsIndex - 1);
         setAnswers(previousAnswers)
-        console.log(previousAnswers)
+    }
+    const onNextSuccess = (answers) => {
+        setCurrentQuestionsIndex(currentQuestionsIndex + 1);
+        setPreviousAnswers(answers)
     }
     const onSubmitSuccess = (answers) => {
-        setCurrentQuestionsIndex(currentQuestionsIndex + 1);
-        console.log("+++",)
-        setPreviousAnswers(answers)
+        //navigate to a different page
     }
     let buttonHtml;
     if (questionsIndex === 0) {
@@ -70,7 +70,6 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                     <div>{q?.question}</div>
                     <div>{q?.type === "multiple-choice" ?
                         <div>{q?.options.map((o, optionsIndex) => {
-
                             return (
                                 <div key={`options${optionsIndex}`}>
                                     <input
@@ -83,7 +82,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                                         }
                                         }
                                         value={o}
-                                        checked={formik.values[q.id] === o}
+                                        checked={formik.values[q.id] === o || selectedAnswers.answer === o}
                                     />
                                     {o}
                                 </div>
@@ -103,4 +102,5 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
         </form>
     )
 }
+
 export default AssesmentQuestions

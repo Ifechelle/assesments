@@ -9,7 +9,7 @@ import Settings from "../components/settings";
 import SignUp from "../components/signup";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../components/notfound";
-// import Hum from "../components/secure/home";
+import Home from "../components/secure/home";
 import HomePage from "../components/homepage";
 import RequireAuth from "../services/requireAuth";
 
@@ -23,7 +23,7 @@ const MyRoutes = () => {
         <Route path="/About" element={<About />} />
         <Route path="/Profile" element={<RequireAuth><Profile /></RequireAuth>} />
         <Route path="/Assesments" element={<RequireAuth><Assesments /></RequireAuth>} />
-        {/* <Route path="/Home" element={<RequireAuth><Hum /></RequireAuth>} /> */}
+        <Route path="/Home" element={<RequireAuth><Home /></RequireAuth>} />
         <Route path="/Settings" element={<RequireAuth><Settings /></RequireAuth>} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Contact" element={<Contacts />} />

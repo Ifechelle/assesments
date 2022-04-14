@@ -29,6 +29,9 @@ const Header = () => {
   const BackHandler = () => {
     navigate("/Home")
   }
+  const SetHandler = () => {
+    navigate("/settings")
+  }
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false)
 
@@ -65,7 +68,7 @@ const Header = () => {
               <MenuItem icon={<FaList />}>Category</MenuItem>
               <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
               <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
-              <MenuItem icon={<BiCog />}><Settings /></MenuItem>
+              <MenuItem icon={<BiCog />}><div onClick={SetHandler}>Logout</div></MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>

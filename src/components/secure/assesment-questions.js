@@ -15,6 +15,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     const q = listOfQuestions[currentQuestionsIndex]
     const questionId = q?.id
     const selectedAnswers = answersDictionary[questionId]
+    const navigate = useNavigate()
 
     useEffect(() => {
         setAnswers(selectedAnswers)
@@ -41,7 +42,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
         setPreviousAnswers(answers)
     }
     const onSubmitSuccess = (answers) => {
-        //navigate to a different page
+          navigate("/Home")   
     }
     let buttonHtml;
     if (questionsIndex === 0) {

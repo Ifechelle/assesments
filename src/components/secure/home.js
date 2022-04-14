@@ -8,10 +8,10 @@ function Home() {
       navigate("/assesments")
     }
     return(
-        <form className="text-center">
+        <form className="text-center text-5xl code">
         <br />
         <br />
-        <div className="text-center text-2xl">Are you ready to start you assesment?</div>
+        <div className="text-center text-6xl code">Are you ready to start you assesment?</div>
         <br />
         <br />
         <div onClick={AssesHandler}> Start </div>

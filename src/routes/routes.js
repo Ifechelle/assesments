@@ -12,6 +12,7 @@ import NotFound from "../components/notfound";
 import Home from "../components/secure/home";
 import HomePage from "../components/homepage";
 import RequireAuth from "../services/requireAuth";
+import PostPass from "../components/pre-fp";
 
 const MyRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const MyRoutes = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Contact" element={<Contacts />} />
         <Route path="/Forgotpassword" element={<ForgotPass />} />
+        <Route path="/PostPass" element={<PostPass />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

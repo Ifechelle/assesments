@@ -27,7 +27,7 @@ function Login() {
     validationSchema: loginValidationSchema,
   });
   const onSuccess = () => {
-    navigate ("/Assesments")
+    navigate ("/Home")
   }
   const onFailure = (message) => {
     setServerError(message)

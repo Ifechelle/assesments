@@ -54,6 +54,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
         buttonHtml = (
             <>
                 <input onClick={previous} type="button" value="Previous" />
+                <div className="space"/>
                 <input type="submit" value="Submit" />
             </>
         );

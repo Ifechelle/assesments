@@ -14,7 +14,7 @@ function Assesments() {
   }, [])
   return (
     
-      <div className="text-center">
+      <div className="text-center bg-amber-400">
         <AssesmentQuestions listOfQuestions={questions.get()} answersDictionary={answers.get()} />
       </div>
   );

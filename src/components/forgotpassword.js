@@ -25,8 +25,9 @@ function ForgotPass() {
         },
         validationSchema: fpValidationSchema
     });
+    const navigate = useNavigate()
     const onSuccess = () => {
-        //callback onSuccess
+        navigate("/PostPass")
     }
     const onFailure = (message) => {
         setServerError(message)

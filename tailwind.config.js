@@ -6,6 +6,14 @@ module.exports = {
   theme: {
     extend: {
     },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      beige: '#f2bc94',
+      brown: '#722620',
+      db: '#30110d',
+    },
+    
   },
 screens: {
   'sm': '640px',

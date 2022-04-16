@@ -14,9 +14,9 @@ function PostPass() {
     return (
         <div>
             The link has been sent to you email. If you can not find it click the link and try again.
-            <div onClick={ForgotPassHandler}>Forgot Password</div>
+            <div className="underline-offset-2" onClick={ForgotPassHandler}>Forgot Password</div>
             If you have reset you password please log in again.
-            <div onClick={LoginHandler}> > </div>
+            <div className="underline-offset-2" onClick={LoginHandler}> > </div>
         </div>
     )
 }

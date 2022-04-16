@@ -20,6 +20,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     useEffect(() => {
         setAnswers(selectedAnswers)
     }, [selectedAnswers])
+
     const formik = useFormik({
         initialValues: {
 
@@ -80,8 +81,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                                         name={`${q.id}-option${optionsIndex}`}
                                         onChange={() => {
                                             formik.setFieldValue(q.id, o)
-                                            setAnswers({ answer: o, questionId, uid: user.uid.get() })
-                                        }
+                                            setAnswers({ ...answers, answer: o, questionId: q.id, userid: user.userid.get() })                                        }
                                         }
                                         value={o}
                                         checked={formik.values[q.id] === o || selectedAnswers.answer === o}
@@ -93,7 +93,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                         </div>
                         :
                         <div>
-                            <input onChange={(e) => { setAnswers({ answer: e.target.value, questionId, uid: user.uid.get() }) }} id="Answer" name="Answer" placeholder='Enter Answer' value={answers?.answer} />
+                            <input onChange={(e) => { setAnswers({ ...answers, answer: e.target.value, questionId: q.id, userid: user.userid.get() }) }} id="Answer" name="Answer" placeholder='Enter Answer' value={answers?.answer} />
                         </div>
                     }</div>
                 </div>

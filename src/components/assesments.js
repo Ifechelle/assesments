@@ -10,7 +10,7 @@ function Assesments() {
 
   useEffect(() => {
       getListOfQuestions()
-      getAnswers(user.uid.get())
+      getAnswers(user.userid.get())
   }, [])
   return (
     

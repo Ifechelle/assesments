@@ -12,6 +12,7 @@ module.exports = {
       beige: '#f2bc94',
       brown: '#722620',
       db: '#30110d',
+      blue: '#231ce1',
     },
     
   },

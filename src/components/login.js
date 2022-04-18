@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginValidationSchema } from "../utils/form-utils";
 import { login } from "../services/auth";
+import "../index.css";
 
 function Login() {
   const [processing, setProcessing] = useState(false)
@@ -41,7 +42,7 @@ function Login() {
     navigate("/SignUp")
   }
   return (
-    <div className="text-center bg-rose-400 h-screen">
+    <div className="text-center bg-gradient-to-t from-db via-brown to-beige h-screen">
       <header>
 
         <head>

@@ -13,6 +13,8 @@ import Home from "../components/secure/home";
 import HomePage from "../components/homepage";
 import RequireAuth from "../services/requireAuth";
 import PostPass from "../components/pre-fp";
+import Post from "../components/after-assesment";
+
 
 const MyRoutes = () => {
   return (
@@ -30,6 +32,7 @@ const MyRoutes = () => {
         <Route path="/Contact" element={<Contacts />} />
         <Route path="/Forgotpassword" element={<ForgotPass />} />
         <Route path="/PostPass" element={<PostPass />} />
+        <Route path="/Post" element={<RequireAuth><Post /></RequireAuth>} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

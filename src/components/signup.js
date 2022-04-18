@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { signup } from "../services/auth";
 import { signupValidationSchema } from "../utils/form-utils";
 import { FaSpinner } from 'react-icons/fa';
+import "../index.css";
 
 
 function SignUp() {
@@ -45,7 +46,7 @@ function SignUp() {
     }
     
     return (
-        <div className='p-5 bg-rose-400 grid text-center text-blue-400 text-base shadow-inner-lg h-screen'>
+        <div className='p-5 bg-gradient-to-t from-db via-brown to-beige text-center text-blue-400 text-base shadow-inner-lg h-screen'>
             <form onSubmit={formik.handleSubmit}>
                 <header className=''>
                     <head>

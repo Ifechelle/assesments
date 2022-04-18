@@ -1,0 +1,527 @@
+[debug] [2022-04-17T03:57:36.362Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T03:57:36.366Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T03:57:36.367Z] CLI Version:   10.6.0
+[debug] [2022-04-17T03:57:36.367Z] Platform:      win32
+[debug] [2022-04-17T03:57:36.368Z] Node Version:  v16.13.2
+[debug] [2022-04-17T03:57:36.370Z] Time:          Sat Apr 16 2022 23:57:36 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T03:57:36.371Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T03:57:36.396Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T03:57:36.397Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T03:58:04.885Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-17T03:58:05.786Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-04-17T03:58:05.786Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project quiz-app---ifelola (Quiz APP - Ifelola) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-17T03:58:51.822Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-04-17T03:58:52.367Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-04-17T03:58:52.367Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.11","browserURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.11/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.11/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.memory.js"}}
+[info] +  Wrote people/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\Ifelola\Programming\my-project 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=640162131&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-04-17T04:00:47.990Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"a82038ce4afdc423f925","redirect_uri":"http://localhost:9005","state":"640162131"}
+[debug] [2022-04-17T04:00:48.217Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sun, 17 Apr 2022 04:00:48 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"a3ce61f87ff0980c422be1fbd4e429c7\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com online.visualstudio.com/api/v1/locations github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"C3DB:7BE2:9E413F:F06758:625B90F0"}
+[debug] [2022-04-17T04:00:48.230Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-04-17T04:00:48.479Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-04-17T04:00:48.480Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Ifechelle","id":61356007,"node_id":"MDQ6VXNlcjYxMzU2MDA3","avatar_url":"https://avatars.githubusercontent.com/u/61356007?v=4","gravatar_id":"","url":"https://api.github.com/users/Ifechelle","html_url":"https://github.com/Ifechelle","followers_url":"https://api.github.com/users/Ifechelle/followers","following_url":"https://api.github.com/users/Ifechelle/following{/other_user}","gists_url":"https://api.github.com/users/Ifechelle/gists{/gist_id}","starred_url":"https://api.github.com/users/Ifechelle/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Ifechelle/subscriptions","organizations_url":"https://api.github.com/users/Ifechelle/orgs","repos_url":"https://api.github.com/users/Ifechelle/repos","events_url":"https://api.github.com/users/Ifechelle/events{/privacy}","received_events_url":"https://api.github.com/users/Ifechelle/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":1,"public_gists":0,"followers":0,"following":0,"created_at":"2020-02-22T15:26:19Z","updated_at":"2022-04-17T03:30:12Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":435,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Ifechelle 
+[info] 
+[debug] [2022-04-17T12:03:54.049Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T12:03:54.053Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T12:03:54.054Z] CLI Version:   10.6.0
+[debug] [2022-04-17T12:03:54.054Z] Platform:      win32
+[debug] [2022-04-17T12:03:54.054Z] Node Version:  v16.13.2
+[debug] [2022-04-17T12:03:54.131Z] Time:          Sun Apr 17 2022 08:03:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T12:03:54.132Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T12:03:54.211Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T12:03:54.213Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T12:04:22.419Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T12:04:22.420Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T12:04:23.429Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 17 Apr 2022 12:04:22 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T12:04:23.757Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-17T12:04:25.326Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-04-17T12:04:25.326Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project quiz-app---ifelola (Quiz APP - Ifelola) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-17T12:08:34.270Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T12:08:34.272Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T12:08:34.274Z] CLI Version:   10.6.0
+[debug] [2022-04-17T12:08:34.274Z] Platform:      win32
+[debug] [2022-04-17T12:08:34.274Z] Node Version:  v16.13.2
+[debug] [2022-04-17T12:08:34.276Z] Time:          Sun Apr 17 2022 08:08:34 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T12:08:34.276Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T12:08:34.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T12:08:34.287Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T12:08:41.276Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-17T12:08:41.730Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-04-17T12:08:41.730Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project quiz-app---ifelola (Quiz APP - Ifelola) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-17T12:21:43.904Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-04-17T12:21:44.447Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-04-17T12:21:44.447Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.11","browserURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.11/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.11/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.memory.js"}}
+[debug] [2022-04-17T18:21:05.201Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:21:05.209Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:21:05.211Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:21:05.212Z] Platform:      win32
+[debug] [2022-04-17T18:21:05.212Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:21:05.215Z] Time:          Sun Apr 17 2022 14:21:05 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:21:05.216Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:21:05.300Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:21:05.301Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:23:30.297Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:23:30.298Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:23:30.328Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:23:30.337Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getFirebaseProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:250:23)
+    at async selectProjectInteractively (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:95:41)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:23:40.394Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:23:40.397Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:23:40.397Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:23:40.397Z] Platform:      win32
+[debug] [2022-04-17T18:23:40.398Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:23:40.399Z] Time:          Sun Apr 17 2022 14:23:40 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:23:40.399Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:23:40.410Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:23:40.410Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:23:52.542Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:23:52.543Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:23:52.573Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:23:52.582Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getFirebaseProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:250:23)
+    at async selectProjectInteractively (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:95:41)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:24:20.230Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:24:20.232Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:24:20.233Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:24:20.233Z] Platform:      win32
+[debug] [2022-04-17T18:24:20.233Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:24:20.234Z] Time:          Sun Apr 17 2022 14:24:20 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:24:20.235Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:24:20.245Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:24:20.246Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:24:26.220Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:24:26.221Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:24:26.255Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:24:26.263Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getAvailableCloudProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:265:16)
+    at async promptAvailableProjectId (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:143:41)
+    at async promptAndAddFirebaseToCloudProject (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:37:23)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list available Google Cloud Platform projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:26:02.357Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:26:02.361Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:26:02.362Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:26:02.363Z] Platform:      win32
+[debug] [2022-04-17T18:26:02.363Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:26:02.364Z] Time:          Sun Apr 17 2022 14:26:02 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:26:02.365Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:26:02.381Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:26:02.382Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:26:04.889Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:26:04.890Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:26:04.922Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:26:04.930Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getFirebaseProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:250:23)
+    at async selectProjectInteractively (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:95:41)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:26:30.375Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:26:30.377Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:26:30.378Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:26:30.378Z] Platform:      win32
+[debug] [2022-04-17T18:26:30.378Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:26:30.380Z] Time:          Sun Apr 17 2022 14:26:30 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:26:30.380Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:26:30.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:26:30.391Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:26:43.723Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:26:43.725Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:26:43.756Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:26:43.766Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getFirebaseProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:250:23)
+    at async selectProjectInteractively (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:95:41)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:27:04.868Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:27:04.871Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:27:04.871Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:27:04.871Z] Platform:      win32
+[debug] [2022-04-17T18:27:04.872Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:27:04.873Z] Time:          Sun Apr 17 2022 14:27:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:27:04.873Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:27:04.884Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:27:04.884Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:27:12.745Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:27:12.746Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:27:12.778Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-04-17T18:27:12.784Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:145:12)
+    at refreshTokens (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:485:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:147:23)
+    at async Client.addAuthHeader (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:138:21)
+    at async Client.request (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:94:34)
+    at async getProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:233:17)
+    at async getFirebaseProjectPage (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:250:23)
+    at async selectProjectInteractively (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:95:41)
+    at async doSetup (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:40:46.755Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:40:46.757Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:40:46.758Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:40:46.758Z] Platform:      win32
+[debug] [2022-04-17T18:40:46.758Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:40:46.760Z] Time:          Sun Apr 17 2022 14:40:46 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:40:46.760Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:40:46.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:40:46.771Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:40:49.367Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T18:40:49.368Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T18:40:59.684Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Sun, 17 Apr 2022 18:40:59 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T18:40:59.761Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-17T18:41:29.770Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100
+[debug] [2022-04-17T18:42:00.614Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100
+    at RetryOperation._fn (C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:236:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2022-04-17T18:42:26.677Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T18:42:26.680Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ifelola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-04-17T18:42:26.680Z] CLI Version:   10.6.0
+[debug] [2022-04-17T18:42:26.680Z] Platform:      win32
+[debug] [2022-04-17T18:42:26.681Z] Node Version:  v16.13.2
+[debug] [2022-04-17T18:42:26.682Z] Time:          Sun Apr 17 2022 14:42:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-04-17T18:42:26.682Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T18:42:26.693Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T18:42:26.694Z] > authorizing via signed-in user (tola.isesanya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ifelola\Programming\my-project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T18:42:38.104Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-04-17T18:42:38.761Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-04-17T18:42:38.761Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project quiz-app---ifelola (Quiz APP - Ifelola) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-17T18:42:53.845Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-04-17T18:42:54.476Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-04-17T18:42:54.476Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.11","browserURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.11/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.11/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.memory.js"}}

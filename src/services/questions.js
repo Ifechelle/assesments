@@ -1,37 +1,45 @@
-import { getDocs, getFirestore, collection, where, query, doc, setDoc, addDoc } from "firebase/firestore";
+import { collection, query, where, getDocs, getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
 import store from "../store";
-
-
+ 
+ 
 export const getListOfQuestions = async () => {
   const db = getFirestore();
   const q = query(collection(db, "questions"));
-
+  console.log("got here1")
   const querySnapshot = await getDocs(q);
   const questions = []
   querySnapshot.forEach((doc) => {
+ 
     questions.push(doc.data())
+ 
   });
+  console.log("got here", questions)
   store.questions.set(questions)
+ 
 }
-export const submitAnswers = async (answers, onSuccess, onFailure, isLast) => {
-  const isCorrect = await checkCorrect(answers);
-  answers = { isCorrect, ...answers };
+export const submitAnswers = async (answers, onSuccess, isLast, onFailure,) => {
+  const isCorrect = await checkCorrect(answers)
+  answers = { isCorrect, ...answers }
   const db = getFirestore();
   if (answers.id) {
     //update
     setDoc(doc(db, "submissions", answers.id), answers, { merge: true })
-      .then(() => {
+      .then((d) => {
         if (onSuccess) {
+          console.log("answers add", answers)
           if (isLast) {
-            const correctnumber = await countCorrect(answers.userid);
-            const incorrectnumber = await countNotCorrect(answers.userid);
-            await submitResults({correctnumber, incorrectnumber, userid: answers.userid})
+            const calculateResults = async () => {
+              const numberOfCorrect = await countCorrect(answers.uid)
+              const numberOfIncorrect = await countIncorrect(answers.uid)
+              await submitResults({ numberOfCorrect, numberOfIncorrect, uid: answers.uid })
+            }
+            calculateResults()
           }
           onSuccess(answers);
         }
       })
       .catch((error) => {
-        console.log("emailNotSent");
+        console.log("emailNotSent", error.message);
         // ..
         if (onFailure) {
           onFailure(error.message);
@@ -39,8 +47,10 @@ export const submitAnswers = async (answers, onSuccess, onFailure, isLast) => {
       });
   } else {
     addDoc(collection(db, "submissions"), answers)
-      .then((answers) => {
+      .then((d) => {
         if (onSuccess) {
+          answers = { id: d.id, ...answers }
+          console.log("answers add", answers)
           onSuccess(answers);
         }
       })
@@ -53,84 +63,94 @@ export const submitAnswers = async (answers, onSuccess, onFailure, isLast) => {
       });
   }
 };
- 
-export const getAnswers = async (userid) => {
+export const checkCorrect = async ({ questionId, answer }) => {
   const db = getFirestore();
-  const q = query(collection(db, "submissions"), where("userid", "==", userid));
+  const q = query(collection(db, "answers"),
+    where("questionid", "==", questionId),
+    where("answer", "==", answer?.toLowerCase()));
+ 
+  const querySnapshot = await getDocs(q);
+  const isCorrect = querySnapshot.size === 1
+  return isCorrect
+}
+ 
+export const getAnswers = async (uid) => {
+  const db = getFirestore();
+  const q = query(collection(db, "submissions"), where("uid", "==", uid));
  
   const querySnapshot = await getDocs(q);
   const answers = {};
   querySnapshot.forEach((doc) => {
-    const data = doc.data();
-    data.id = doc.id;
-    answers[data.questionId] = data;
+    const data = doc.data()
+    data.id = doc.id
+    answers[data.questionId] = data
   });
   store.answers.set(answers);
+  console.log(answers, "+++")
 };
  
-export const checkCorrect = async ({ questionId, answer }) => {
+export const countCorrect = async (uid) => {
   const db = getFirestore();
-  const q = query(
-    collection(db, "answers"),
-    where("questionId", " == ", questionId),
-    where("answer", " == ", answer)
-  );
+  const q = query(collection(db, "submissions"),
+    where("isCorrect", "==", true),
+    where("uid", "==", uid));
  
   const querySnapshot = await getDocs(q);
-  const isCorrect = querySnapshot.size === 1;
-  return isCorrect;
-};
- 
-export const countCorrect = async (userid) => {
-  const db = getFirestore();
-  const q = query(
-    collection(db, "submissions"),
-    where("userid", " == ", userid),
-    where("isCorrect", " == ", true)
-  );
- 
-  const querySnapshot = await getDocs(q);
-  const numberCorrect = querySnapshot.size;
-  return numberCorrect;
-};
-export const countNotCorrect = async (userid) => {
-  const db = getFirestore();
-  const q = query(
-    collection(db, "submissions"),
-    where("userid", " == ", userid),
-    where("isCorrect", " == ", false)
-  );
- 
-  const querySnapshot = await getDocs(q);
-  const inCorrect = querySnapshot.size;
-  return inCorrect;
-};
- 
-export const getResults = async ({ userid }) => {
-  const db = getFirestore();
-  const q = query(
-    collection(db, "submissions"),
-    where("userid", " == ", userid)
-  );
- 
-  const querySnapshot = await getDocs(q);
-  const results = [];
+  const correct = []
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
-    results.push(doc.data());
+ 
+    correct.push(doc.data())
+ 
   });
-  store.results.set(results);
+  return correct.length
+ 
+ 
 };
+ 
+export const countIncorrect = async (uid) => {
+  const db = getFirestore();
+  const q = query(collection(db, "submissions"),
+    where("isCorrect", "==", false),
+    where("uid", "==", uid));
+ 
+    const querySnapshot = await getDocs(q);
+    const incorrect = []
+    querySnapshot.forEach((doc) => {
+ 
+      incorrect.push(doc.data())
+ 
+    });
+    return incorrect.length
+ 
+ 
+};
+ 
+export const showResults = async ( uid ) => {
+  const db = getFirestore();
+  try {
+    const q = query(collection(db, "results"),
+      where("uid", "==", uid));
+    const querySnapshot = await getDocs(q);
+    const results = []
+    querySnapshot.forEach((doc) => {
+ 
+      results.push(doc.data())
+ 
+    });
+    console.log("got here", results)
+    store.results.set(results)
+  } catch (e) {
+    console.log(e.message)
+  }
+}
  
 const submitResults = async (results) => {
   const db = getFirestore();
-    setDoc(doc(db, "results", results.userid), results, { merge: true })
-      .then((d) => {
-      })
-      .catch((error) => {
-        console.log("results not submitted", error.message);
-        // ..
-        throw error;
-      });
+  setDoc(doc(db, "results", results.uid), results, { merge: true })
+    .then((d) => {
+    })
+    .catch((error) => {
+      console.log("resultsNotSubmitted", error.message);
+      throw error
+    });
 };

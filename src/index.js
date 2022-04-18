@@ -17,13 +17,14 @@ import ForgotPass from './components/forgotpassword';
 import RequireAuth from "./services/requireAuth";
 import HomePage from './components/homepage';
 import MyRoutes from './routes/routes'
+import Results from './components/results'
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <MyRoutes/>
+      <MyRoutes />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

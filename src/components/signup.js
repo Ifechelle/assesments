@@ -44,9 +44,12 @@ function SignUp() {
     const onFailure = (message) => {
         setServerError(message)
     }
+    const LoginHandler = () => {
+        navigate("/login")
+      }
     
     return (
-        <div className='p-5 bg-gradient-to-t from-db via-brown to-beige text-center text-blue-400 text-base shadow-inner-lg h-screen'>
+        <div className='p-5 code bg-gradient-to-t from-db to-brown text-center text-beige text-base shadow-inner-lg h-screen'>
             <form onSubmit={formik.handleSubmit}>
                 <header className=''>
                     <head>
@@ -55,8 +58,8 @@ function SignUp() {
                         <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Architects+Daughter&family=Festive&family=Gideon+Roman&family=Lobster+Two:ital@1&family=Shizuru&family=Syne+Tactile&display=swap" rel="stylesheet" />
                     </head>
 
-                    <body className="body-font font-Akaya">
-                        <div className="text-pink-300 text-3xl">
+                    <body className="code">
+                        <div className="text-beige text-3xl code">
                             Sign Up
                         </div>
                         <br />
@@ -127,12 +130,14 @@ function SignUp() {
 
                         <div className="">
                             <p>
-                                <button onClick="" type="submit" className='rounded-full px-10 py-1 text-pink-300 bg-purple-100 text-row'>
+                                <button onClick="" type="submit" className='rounded-full px-10 py-1 text-brown bg-beige text-row'>
                                     <input type="submit" name='submit' value="Sign Up" />
                                     {processing && <FaSpinner icon="spinner" className="spinner animate-spin" color="teal" size={35} />}
                                 </button>
                             </p>
                         </div>
+                        <br />
+                        <div onClick={LoginHandler}>Login</div>
                         <div>{serverError}</div>
                     </body>
                 </header>

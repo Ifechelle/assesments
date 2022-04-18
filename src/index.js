@@ -5,19 +5,8 @@ import { render } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
-import SignUp from './components/signup';
-import About from './components/about';
-import Assesments from './components/assesments';
-import Login from './components/login';
-import Profile from './components/profile';
-import Settings from './components/settings';
-import Contacts from './components/contact';
-import ForgotPass from './components/forgotpassword';
-import RequireAuth from "./services/requireAuth";
-import HomePage from './components/homepage';
-import MyRoutes from './routes/routes'
-import Results from './components/results'
+import MyRoutes from './routes/routes';
+
 
 
 

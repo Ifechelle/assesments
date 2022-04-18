@@ -1,0 +1,17 @@
+body {
+    color: #000000;
+    padding: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: xx-large;
+    background-image: linear-gradient();
+    align-content:left;
+    background-image: url(/public/images/contactbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.bgimage{
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-image: url(/public/images/contactbg.jpg);
+}

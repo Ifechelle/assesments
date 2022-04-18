@@ -41,8 +41,11 @@ function Login() {
   const SignUpHandler = () => {
     navigate("/SignUp")
   }
+  const ContactHandler = () => {
+    navigate("/contact")
+  }
   return (
-    <div className="text-center bg-gradient-to-t from-db via-brown to-beige h-screen">
+    <div className="text-center bg-gradient-to-t from-db via-brown to-beige code text-gray-200 h-screen">
       <header>
 
         <head>
@@ -50,7 +53,7 @@ function Login() {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Architects+Daughter&family=Festive&family=Gideon+Roman&family=Lobster+Two:ital@1&family=Shizuru&family=Syne+Tactile&display=swap" rel="stylesheet" />
         </head>
-        <body className="text-Architect ">
+        <body className="code text-sky-700">
           <br />
           <br />
           <br />
@@ -66,7 +69,7 @@ function Login() {
             <form onSubmit={formik.handleSubmit}>
             <div>
               <label>Email: </label>
-              <input id="email" name="email" onChange={formik.handleChange} value={formik.values.email} placeholder='Enter Email' />
+              <input className="text-blue" id="email" name="email" onChange={formik.handleChange} value={formik.values.email} placeholder='Enter Email' />
               
             </div>
             <div className="text-red-500 text-xl">
@@ -75,7 +78,7 @@ function Login() {
             <br />
             <div>
               <label>Password: </label>
-              <input id="password" name="password" onChange={formik.handleChange} value={formik.values.password} placeholder='Enter Password' />
+              <input className="text-blue" type="password" id="password" name="password" onChange={formik.handleChange} value={formik.values.password} placeholder='Enter Password' />
             </div>
             <div className="text-red-500 text-xl">
               {formik.errors.password}
@@ -83,13 +86,14 @@ function Login() {
 
             <br />
             <div>
-              <button className='text-blue-600 bg-black-200 rounded-full px-10 py-1 shadow-inner'> <input type="submit" name='submit' value="Login" /> </button>
+              <button className='text-beige rounded-full px-10 bg-brown py-1 shadow-inner'> <input type="submit" name='submit' value="Login" /> </button>
             </div>
-
             <br />
-            <div className="" onClick={ForgotPassHandler}>Forgot Password</div>
+            <div className="text-blue-200" onClick={ForgotPassHandler}>Forgot Password</div>
             <br />
-            <div className="" onClick={SignUpHandler}>Sign Up</div>
+            <div className="text-blue-200" onClick={SignUpHandler}>Sign Up</div>
+            <br />
+            <div onClick={ContactHandler}>Contact</div>
             </form>
           </div>
           <div>{serverError}</div>

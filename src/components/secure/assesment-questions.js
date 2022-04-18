@@ -70,7 +70,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     }
     return (
         <form onSubmit={formik.handleSubmit}>
-            <div className="grid grid rows-3 w-full mx-auto text-center text-5xl text-white bg-gradient-to-t from-beige h-screen font-BebasNeue">
+            <div className="grid grid rows-3 w-full mx-auto text-center text-5xl text-db bg-gradient-to-t from-beige h-screen code">
 
                 <>
                     <div key={`question${questionsIndex}`}>
@@ -101,7 +101,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                             <div>
                                 Answer:<input value={answers?.answer} onChange={(e) => {
                                     setAnswers({ ...answers, answer: e.target.value, questionId: q.id, uid: user.uid.get() })
-                                }} className='text-beige mb-5 border-b-2 border-black bg-gradient-to-t from-db to-brown md:w-1/2 h-10 py-2 w-full placeholder:text-black-200 font-md  text-left md:text-3xl sm:text-2xl text-center' id="Answer" name="Answer" placeholder='Enter Text' />
+                                }} className='text-beige mb-5 border-b-2 border-black bg-gradient-to-t from-db to-brown md:w-1/2 h-10 py-2 w-full placeholder:text-red-900 code  text-left md:text-3xl sm:text-2xl text-center' id="Answer" name="Answer" placeholder='Enter Text' />
                             </div>
                         }</div>
 

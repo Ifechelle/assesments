@@ -41,6 +41,9 @@ const Header = () => {
   const ContactHandler = () => {
     navigate("/contact")
   }
+  const ProfileHandler = () => {
+    navigate("/profile")
+  }
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false)
 
@@ -58,7 +61,7 @@ const Header = () => {
           <SidebarHeader>
             <div className="logotext">
               {/* small and big change using menucollapse state */}
-              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+              <p>{menuCollapse ? "" : ""} <img src="images/logo.jpg" alt="pic" width="90" height="90"></img></p>
             </div>
             <div className="closemenu" onClick={menuIconClick}>
               {/* changing menu collapse icon on click */}
@@ -74,7 +77,7 @@ const Header = () => {
               <MenuItem active={true} icon={<FiHome />}>
               <div onClick={HomeHandler}>Home</div>
               </MenuItem>
-              {/* <MenuItem icon={<FaList />}>Category</MenuItem> */}
+              <MenuItem icon={<FaList />}><div onClick={ProfileHandler}>Profile</div></MenuItem>
               <MenuItem icon={<FaRegHeart />}><div onClick={ContactHandler}>Contact Us </div></MenuItem>
               <MenuItem icon={<RiPencilLine />}><div onClick={AboutHandler}>About </div></MenuItem>
               <MenuItem icon={<BiCog />}><div onClick={SetHandler}>Settings</div></MenuItem>

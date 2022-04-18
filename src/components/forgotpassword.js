@@ -34,7 +34,7 @@ function ForgotPass() {
         setServerError(message)
     }
     return (
-        <div className="text-center bg-gradient-to-t from-db via-brown to-beige bg-rose-400 h-screen">
+        <div className="text-center text-blue code bg-gradient-to-t from-brown to-beige h-screen">
             <header>
                 <form onSubmit={formik.handleSubmit}>
                     <br />
@@ -47,7 +47,7 @@ function ForgotPass() {
                     <br />
                     <br />
                     <br />
-                    <div className="text-5xl">Reset Password</div>
+                    <div className="text-5xl text-db">Reset Password</div>
                     <br />
                     <div className="text-3xl">
                         <label>Email: </label>
@@ -57,7 +57,7 @@ function ForgotPass() {
                         {formik.errors.email}
                     </div>
                     <br />
-                    <div className="text-xl">
+                    <div className="text-xl text-db">
                         <button className='text-blue-600 bg-black-200 rounded-full px-10 py-1'> <input type="submit" name='submit' value="Send" /> </button>
                     </div>
                     <div>{serverError}</div>

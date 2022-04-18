@@ -14,6 +14,7 @@ function StartPage() {
   const AboutHandler = () => {
     navigate("/about")
   }
+  
   return (
 
     <div className="bg-gradient-to-t from-db via-brown to-beige h-screen text-center text-4xl text-blue code">
@@ -34,6 +35,7 @@ function StartPage() {
         <div onClick={LoginHandler}>Login</div>
         <br />
         <div onClick={AboutHandler}>About</div>
+        <br />
 
       </header>
     </div>

@@ -9,18 +9,30 @@ function Post() {
 
 
   return (
-    <div className="text-center ">
-
-      <div className="text-center ">You have completed your test. <br />
-        While this page is still under development if you would like to know your results then email "tola.isesanya@gmail.com"<br />
-        If you are unsatisfied with your results then please email back . <br />
-        We will try to get back to you in 2-3 business  days to and if you would like to know what you got wrong feel free to include so.</div>
+    <div className="text-center text-blue text-3xl bg-gradient-to-t from-brown to-beige h-screen">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="text-center text-red-900">You have completed your test. <br />
+        If you are unsatisfied with your results email "tola.isesanya@gmail.com". <br />
+        We will do our best to get back with you for a retry <br/>
+        To see your score refresh and log in again
+        </div>
       <br />
       Number of Correct: {results[0]?.numberOfCorrect?.get()}
       <br />
       Number of Incorrect: {results[0]?.numberOfIncorrect?.get()}
-    </div>
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      
+     <div> To leave use the sidebar</div>
+     </div>
   )
 };
 

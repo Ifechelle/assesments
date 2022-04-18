@@ -5,15 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        beige: '#f2bc94',
+        brown: '#722620',
+        db: '#30110d',
+        blue: '#3202a1',
+      },
     },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      beige: '#f2bc94',
-      brown: '#722620',
-      db: '#30110d',
-      blue: '#3202a1',
-    },
+    
     
   },
 screens: {

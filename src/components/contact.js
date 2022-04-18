@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "../index.css"
+import Header from "./secure/header";
 
 function Contacts() {
     return (
-        <div className='text-center text-h-100 bg-gradient-to-t from-db via-brown to-beige p-5 shadow-inner h-screen'>
-            <header className=" bg-gradient-to-t from-db via-brown to-beige shadow-outer h-full">
+        <div className='text-center bg-gradient-to-l from-brown to-beige shadow-inner h-screen'>
+            <Header />
+             <header>
                 <br />
                 <br />
                 <br />
@@ -14,24 +14,22 @@ function Contacts() {
                 <br />
                 <br />
                 <br />
+                <div className='text-4xl text-blue'> Need Help? Contact JHB Institute</div>
                 <br />
                 <br />
-                <div className='text-4xl '> Need Help? Contact JHB Institute</div>
-                <br />
-                <br />
-                <div className="text-2xl">
+                <div className="text-2xl text-beige">
                     <p>
                         Phone Number: 443-333-3333
                     </p>
                 </div>
                 <br />
-                <div className="text-2xl">
+                <div className="text-2xl text-beige">
                     <p>
                         Email: oooo@gmail.com
                     </p>
                 </div>
                 <br />
-                <div className="text-2xl">
+                <div className="text-2xl text-blue">
                     <p>
                         Address: 7710 Windsor Mill Rd, Windsor Mill, Maryland
                     </p>

@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { fpValidationSchema } from "../utils/form-utils";
 import { forgotpassword } from "../services/auth";
+import "../index.css"
 
 function ForgotPass() {
     const [processing, setProcessing] = useState(false)
@@ -33,7 +34,7 @@ function ForgotPass() {
         setServerError(message)
     }
     return (
-        <div className="text-center bg-rose-400 h-screen">
+        <div className="text-center bg-gradient-to-t from-db via-brown to-beige bg-rose-400 h-screen">
             <header>
                 <form onSubmit={formik.handleSubmit}>
                     <br />

@@ -20,5 +20,3 @@ Login:
   // const handleUsername = (event) => {
   //   setUsername(event.target.value)
   // }
-
-  // console.log(username)

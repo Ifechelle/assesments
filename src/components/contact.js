@@ -1,9 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../index.css"
+
 function Contacts() {
     return (
-        <div className='text-center text-h-100 bg-rose-300 p-5 shadow-inner h-screen'>
-            <header className="bg-black-400 shadow-outer h-full">
+        <div className='text-center text-h-100 bg-gradient-to-t from-db via-brown to-beige p-5 shadow-inner h-screen'>
+            <header className=" bg-gradient-to-t from-db via-brown to-beige shadow-outer h-full">
                 <br />
                 <br />
                 <br />

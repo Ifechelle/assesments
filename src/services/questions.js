@@ -5,7 +5,7 @@ import store from "../store";
 export const getListOfQuestions = async () => {
   const db = getFirestore();
   const q = query(collection(db, "questions"));
-  console.log("got here1")
+ 
   const querySnapshot = await getDocs(q);
   const questions = []
   querySnapshot.forEach((doc) => {
@@ -13,7 +13,6 @@ export const getListOfQuestions = async () => {
     questions.push(doc.data())
  
   });
-  console.log("got here", questions)
   store.questions.set(questions)
  
 }
@@ -26,7 +25,6 @@ export const submitAnswers = async (answers, onSuccess, isLast, onFailure,) => {
     setDoc(doc(db, "submissions", answers.id), answers, { merge: true })
       .then((d) => {
         if (onSuccess) {
-          console.log("answers add", answers)
           if (isLast) {
             const calculateResults = async () => {
               const numberOfCorrect = await countCorrect(answers.uid)
@@ -50,7 +48,6 @@ export const submitAnswers = async (answers, onSuccess, isLast, onFailure,) => {
       .then((d) => {
         if (onSuccess) {
           answers = { id: d.id, ...answers }
-          console.log("answers add", answers)
           onSuccess(answers);
         }
       })
@@ -86,7 +83,6 @@ export const getAnswers = async (uid) => {
     answers[data.questionId] = data
   });
   store.answers.set(answers);
-  console.log(answers, "+++")
 };
  
 export const countCorrect = async (uid) => {
@@ -137,7 +133,6 @@ export const showResults = async ( uid ) => {
       results.push(doc.data())
  
     });
-    console.log("got here", results)
     store.results.set(results)
   } catch (e) {
     console.log(e.message)

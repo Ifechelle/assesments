@@ -4,26 +4,24 @@ import { getAnswers, getListOfQuestions, showResults } from "./../services/quest
 import store from "./../store";
 import AssesmentQuestions from "./secure/assesment-questions";
 import Post from "./after-assesment";
+import "../index.css"
 
 function Assesments() {
 
   const { user, questions, answers, results } = useState(store)
-  const uid = user.uid.get()
+
   useEffect(() => {
-    
-    if (results.length === 0) {
-      getListOfQuestions()
-      getAnswers(uid)
-    }
+    showResults(user.uid.get())
+    getListOfQuestions()
+    getAnswers(user.uid.get())
   }, [])
   if (results.length !== 0) {
-    showResults(uid)
     return <Post />
   }
 
   return (
 
-    <div className="text-center bg-amber-400">
+    <div className="text-center bg-gradient-to-t from-db via-brown to-beige">
       <AssesmentQuestions listOfQuestions={questions.get()} answersDictionary={answers.get()} />
     </div>
   );

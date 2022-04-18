@@ -15,7 +15,6 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     const questionId = q?.id
     const selectedAnswers = answersDictionary[questionId]
     const navigate = useNavigate()
-    console.log(answersDictionary[questionId], "xyz")
     useEffect(() => {
         setAnswers(selectedAnswers)
     }, [selectedAnswers])
@@ -31,7 +30,6 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     })
     const questionsIndex = currentQuestionIndex
     const next = () => {
-        console.log(answers, '+++')
         submitAnswers(answers, onNextSuccess)
     }
     const previous = () => {
@@ -47,8 +45,8 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
         navigate("/Post")
     }
     let buttonHtml;
-    const nextButton = <button className=" m-3 bg-white hover:bg-blue-700 font-bold text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" onClick={next} type="button"> Next</button>
-    const previousButton = <button className="m-3 bg-white hover:bg-blue-700 font-bold text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" type="button" onClick={previous}> Previous</button>
+    const nextButton = <button className=" m-3 bg-gradient-to-t from-brown to-beige font-bold text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" onClick={next} type="button"> Next</button>
+    const previousButton = <button className="m-3 bg-gradient-to-t from-brown to-beige text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" type="button" onClick={previous}> Previous</button>
     if (questionsIndex === 0) {
         buttonHtml = (
             <>
@@ -59,7 +57,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
         buttonHtml = (
             <>
                 {previousButton}
-                <button className=" m-3 bg-white hover:bg-blue-700 font-bold text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" type="submit"> Submit</button>
+                <button className=" m-3 bg-gradient-to-t from-brown to-beige font-bold text-cyan-300 py-2 px-4 md: w-1/6 rounded-full place-items-center" type="submit"> Submit</button>
             </>
         );
     } else {
@@ -72,7 +70,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
     }
     return (
         <form onSubmit={formik.handleSubmit}>
-            <div className="grid grid rows-3 w-full mx-auto text-center text-5xl text-white bg-gradient-to-r from-cyan-300  to-blue-400 h-screen font-BebasNeue">
+            <div className="grid grid rows-3 w-full mx-auto text-center text-5xl text-white bg-gradient-to-t from-beige h-screen font-BebasNeue">
 
                 <>
                     <div key={`question${questionsIndex}`}>
@@ -103,8 +101,7 @@ const AssesmentQuestions = ({ listOfQuestions, answersDictionary }) => {
                             <div>
                                 Answer:<input value={answers?.answer} onChange={(e) => {
                                     setAnswers({ ...answers, answer: e.target.value, questionId: q.id, uid: user.uid.get() })
-                                    console.log(answers, '---')
-                                }} className='text-beige mb-5 border-b-2 border-black bg-db md:w-1/2 h-10 py-2 w-full placeholder:text-black-200 font-md  text-left md:text-3xl sm:text-2xl text-center' id="Answer" name="Answer" placeholder='Enter Text' />
+                                }} className='text-beige mb-5 border-b-2 border-black bg-gradient-to-t from-db to-brown md:w-1/2 h-10 py-2 w-full placeholder:text-black-200 font-md  text-left md:text-3xl sm:text-2xl text-center' id="Answer" name="Answer" placeholder='Enter Text' />
                             </div>
                         }</div>
 

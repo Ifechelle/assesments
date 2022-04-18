@@ -21,16 +21,25 @@ import { BiCog } from "react-icons/bi";
 //import sidebar css from react-pro-sidebar module and our custom css 
 import "react-pro-sidebar/dist/css/styles.css";
 import "../../header.css";
-import Settings from "../settings";
+
 
 
 const Header = () => {
   const navigate = useNavigate()
   const BackHandler = () => {
-    navigate("/Home")
+    navigate("/StartPage")
   }
   const SetHandler = () => {
     navigate("/settings")
+  }
+  const HomeHandler = () => {
+    navigate("/home")
+  }
+  const AboutHandler = () => {
+    navigate("/about")
+  }
+  const ContactHandler = () => {
+    navigate("/contact")
   }
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false)
@@ -63,12 +72,12 @@ const Header = () => {
           <SidebarContent>
             <Menu iconShape="square">
               <MenuItem active={true} icon={<FiHome />}>
-                Home
+              <div onClick={HomeHandler}>Home</div>
               </MenuItem>
-              <MenuItem icon={<FaList />}>Category</MenuItem>
-              <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
-              <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
-              <MenuItem icon={<BiCog />}><div onClick={SetHandler}>Logout</div></MenuItem>
+              {/* <MenuItem icon={<FaList />}>Category</MenuItem> */}
+              <MenuItem icon={<FaRegHeart />}><div onClick={ContactHandler}>Contact Us </div></MenuItem>
+              <MenuItem icon={<RiPencilLine />}><div onClick={AboutHandler}>About </div></MenuItem>
+              <MenuItem icon={<BiCog />}><div onClick={SetHandler}>Settings</div></MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>

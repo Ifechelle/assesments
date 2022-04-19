@@ -93,7 +93,7 @@ function Login() {
             <br />
             <div className="text-blue-200" onClick={SignUpHandler}>Sign Up</div>
             <br />
-            <div onClick={ContactHandler}>Contact</div>
+            <div onClick={ContactHandler}>Contact Us</div>
             </form>
           </div>
           <div>{serverError}</div>

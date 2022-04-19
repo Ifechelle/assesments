@@ -3,7 +3,7 @@ import Header from "./secure/header";
 
 function Contacts() {
     return (
-        <div className='text-center bg-gradient-to-l from-brown to-beige shadow-inner h-screen'>
+        <div className='text-center bg-gradient-to-l from-brown to-beige shadow-inner h-screen code'>
             <Header />
              <header>
                 <br />
@@ -14,7 +14,7 @@ function Contacts() {
                 <br />
                 <br />
                 <br />
-                <div className='text-4xl text-blue'> Need Help? Contact JHB Institute</div>
+                <div className='text-4xl text-blue'> Need Help? Contact JHB IT Institute</div>
                 <br />
                 <br />
                 <div className="text-2xl text-beige">

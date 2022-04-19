@@ -31,7 +31,7 @@ function Post() {
       <br />
       <br />
       
-     <div> To leave use the sidebar</div>
+     <div className="text-xl"> To exit this page use the Logout or Home button on the sidebar</div>
      </div>
   )
 };

@@ -5,7 +5,7 @@ import "../index.css"
 
 function About() {
   return (
-    <div className="text-center bg-gradient-to-t from-brown to-beige text-3xl text-db h-screen">
+    <div className="text-center bg-gradient-to-t from-brown to-beige text-2xl text-red-900 h-screen code">
       <header>
         <Header />
         <br />
@@ -15,7 +15,9 @@ function About() {
         <br />
         <div >
           <p>
+            <div className="text-4xl">
             JHB (Jesus House Baltimore):
+            </div>
             <br />
             Where the Word Is Taught With Integrity.
             <br />

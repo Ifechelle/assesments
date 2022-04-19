@@ -19,14 +19,15 @@ function PostPass() {
             <br />
             <br />
             <br />
-            The link has been sent to you email. If you can not find it click the link and try again. <br />
+            Email Sent.<br />
+            If you can not find the email, click the button below to go back and try again. <br />
             <button>
             <div className="underline-offset-2 text-2xl text-beige rounded-full bg-gradient-to-t from-brown to-beige" onClick={ForgotPassHandler}> ⬅ Forgot Password</div>
             </button>
             <br />
             <br />
             <br />
-            If you have reset you password log in again.<br />
+            If you have reset your password, then click the button below to continue.<br />
             <button>
             <div className="underline-offset-2 text-2xl text-beige rounded-full bg-gradient-to-t from-brown to-beige" onClick={LoginHandler}> Continue ➡ </div>
             </button>
